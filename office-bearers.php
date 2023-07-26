@@ -3,6 +3,17 @@
 <html lang="en">
 
 <?php
+$_2023 = [
+    ['year', 'name', 'desig', 'mobile', 'wa', 'li', 'gm', 'ig', 'fb', 'photo'],
+    ['2023', 'Naviket Mankoo', 'President, SC', '6283504891', '6283504891', 'https://www.linkedin.com/in/naviket-mankoo-b45297255/', 'president.sc@iitrpr.ac.in', 'https://www.instagram.com/naviket_mankoo12/', '', '2021mcb1239'],
+    ['2023', 'Simarpreet Kaur', 'Research Secretary', '7988084198', '7988084198', '', 'phdrep@iitrpr.ac.in', '', '', '2020bmz0002'],
+    ['2023', 'Mehul Gupta', 'General Secretary, BOST', '7627000977', '7627000977', 'https://www.linkedin.com/in/mehul-gupta-78ab52241/', 'gs.lit@iitrpr.ac.in', '', '', '2021eeb1188'],
+    ['2023', 'Vaibhav Singla', 'General Secretary, BOCA', '8146720616', '8146720616', 'https://www.linkedin.com/in/vaibhav-singla-b4081122b/', 'gs.lit@iitrpr.ac.in', 'https://www.instagram.com/va1bhav_/', '', '2021mcb1254'],
+    ['2023', 'Swaran Pratap Singh', 'General Secretary, BOLA', '7500481739', '7500481739', 'https://www.linkedin.com/in/swaran-pratap-singh-788947227/', 'gs.lit@iitrpr.ac.in', 'https://www.instagram.com/swaran_pratap_singh/', '', '2021eeb1329'],
+    ['2023', 'Harshdeep Singh', 'General Secretary, BOHA', '9588135485', '9588135485', 'https://www.linkedin.com/in/harshdeep-singh-262028225/', 'gs.hostel@iitrpr.ac.in', 'https://www.instagram.com/_harshdeep_08/', '', '2021mcb1044'],
+    ['2023', 'Shrey Jalota', 'General Secretary, BOSA', '9877361782', '9877361782', 'https://www.linkedin.com/in/sjshrey321/', 'gs.sports@iitrpr.ac.in', 'https://www.instagram.com/sjshrey321/', '', '2021meb1324'],
+    ['2023', 'Prince Gupta', 'General Secretary, BOAA', '8958534787', '8958534787', 'https://www.linkedin.com/in/prince-gupta-946164227/', 'gs.academic@iitrpr.ac.in', 'https://www.instagram.com/17gupta_prince/', '', '2021mmb1355'],
+];
 $_2022 = [
     ['year', 'name', 'desig', 'mobile', 'wa', 'li', 'gm', 'ig', 'fb', 'photo'],
     ['2022', 'Vedant Sati', 'President, SC', '9205209274', '9205209274', 'https://www.linkedin.com/in/vedant-sati-895b71205/', 'president.sc@iitrpr.ac.in', 'https://www.instagram.com/vedant.sati/', '', '2020eeb1219'],
@@ -249,9 +260,9 @@ $_2018 = [
     if (isset($_GET['q']))
         $year = $_GET['q'];
     else
-        $year = 2022;
-    if (!($year == 2022 || $year == 2021 || $year == 2020 || $year == 2019 || $year == 2018))
-        $year = 2022;
+        $year = 2023;
+    if (!($year==2023 || $year == 2022 || $year == 2021 || $year == 2020 || $year == 2019 || $year == 2018))
+        $year = 2023;
     ?>
     <!-- Main Content -->
     <div class="content">
@@ -259,6 +270,9 @@ $_2018 = [
             <div class="row">
                 <div class="year-cover">
                     <ul>
+                        <a href="office-bearers.php?q=2023">
+                            <li class="<?php if ($year == '2023') echo 'active'; ?>"><span>2023-24</span></li>
+                        </a>
                         <a href="office-bearers.php?q=2022">
                             <li class="<?php if ($year == '2022') echo 'active'; ?>"><span>2022-23</span></li>
                         </a>
@@ -279,7 +293,9 @@ $_2018 = [
             </div>
             <div class="team row">
                 <?php
-                if ($year == 2022)
+                if ($year == 2023)
+                    $record = $_2023;
+                else if ($year == 2022)
                     $record = $_2022;
                 else if ($year == 2021)
                     $record = $_2021;
